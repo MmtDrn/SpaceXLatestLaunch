@@ -8,9 +8,12 @@
 import Foundation
 import Alamofire
 
-class Networking {
+class Networking: NetworkingProtocol {
     
-    static func request<T: Decodable>(router: EndpointConfiguration,
+    static let shared = Networking()
+    private init() { }
+    
+    func request<T: Decodable>(router: EndpointConfiguration,
                                       thread: DispatchQoS.QoSClass? = nil,
                                       shouldShowLoading: Bool = false,
                                       lottieType: LottieType = .loading,
@@ -18,25 +21,25 @@ class Networking {
         switch thread {
         case .background:
             DispatchQueue.global(qos: .background).async {
-                handleRequest(router: router,
+                self.handleRequest(router: router,
                               shouldShowLoading: shouldShowLoading,
                               lottieType: lottieType,
                               completion: completion)
             }
         default:
-            handleRequest(router: router,
+            self.handleRequest(router: router,
                           shouldShowLoading: shouldShowLoading,
                           completion: completion)
         }
     }
     
-    static private func handleRequest<T: Decodable>(router: EndpointConfiguration,
+    private func handleRequest<T: Decodable>(router: EndpointConfiguration,
                                                     shouldShowLoading: Bool = false,
                                                     lottieType: LottieType = .loading,
                                                     completion: @escaping (T?, NetworkError?) -> Void) {
         if shouldShowLoading {
             LoadingManager.shared.showLoading(fromVC: UIApplication.shared.topMostViewController, lottieType: lottieType) {
-                callRequest(router: router,
+                self.callRequest(router: router,
                             shouldShowLoading: shouldShowLoading,
                             lottieType: lottieType,
                             completion: completion)
@@ -45,28 +48,29 @@ class Networking {
         else {
             callRequest(router: router,
                         shouldShowLoading: shouldShowLoading,
+                        lottieType: lottieType,
                         completion: completion)
         }
     }
     
-    static private func callRequest<T: Decodable>(router: EndpointConfiguration,
-                                                  shouldShowLoading: Bool = false,
-                                                  lottieType: LottieType = .loading,
+    private func callRequest<T: Decodable>(router: EndpointConfiguration,
+                                                  shouldShowLoading: Bool?,
+                                                  lottieType: LottieType?,
                                                   completion: @escaping (T?, NetworkError?) -> Void) {
         
         AF.request(router).responseDecodable(of: T.self) { response in
             
-            if shouldShowLoading {
+            if shouldShowLoading ?? false {
                 LoadingManager.shared.dismissLoading() {
-                    handleResponse(response: response, completion: completion)
+                    self.handleResponse(response: response, completion: completion)
                 }
             } else {
-                handleResponse(response: response, completion: completion)
+                self.handleResponse(response: response, completion: completion)
             }
         }
     }
     
-    static private func handleResponse<T: Decodable>(response: DataResponse<T, AFError>,
+    private func handleResponse<T: Decodable>(response: DataResponse<T, AFError>,
                                                      completion: @escaping (T?, NetworkError?) -> Void) {
         printLog(response: response)
         switch response.result {
@@ -94,7 +98,7 @@ class Networking {
         }
     }
     
-    static private func printLog<T: Decodable>(response: AFDataResponse<T>) {
+    private func printLog<T: Decodable>(response: AFDataResponse<T>) {
         print("\n\n\n")
         print("🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐🌐")
         debugPrint(response)

@@ -36,6 +36,11 @@
 		B56661692AC70E66000BE17D /* CrewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661682AC70E66000BE17D /* CrewModel.swift */; };
 		B566616B2AC70F2B000BE17D /* CapsuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566616A2AC70F2B000BE17D /* CapsuleModel.swift */; };
 		B566616D2AC71257000BE17D /* LaunchPadsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566616C2AC71257000BE17D /* LaunchPadsModel.swift */; };
+		B56661702AC74CD0000BE17D /* StatefulVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566616F2AC74CD0000BE17D /* StatefulVM.swift */; };
+		B56661722AC74CEB000BE17D /* StatefulDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661712AC74CEB000BE17D /* StatefulDS.swift */; };
+		B56661742AC74D26000BE17D /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661732AC74D26000BE17D /* HomeVM.swift */; };
+		B56661762AC74D51000BE17D /* HomeDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661752AC74D51000BE17D /* HomeDS.swift */; };
+		B56661782AC75FDC000BE17D /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661772AC75FDC000BE17D /* NetworkingProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +97,11 @@
 		B56661682AC70E66000BE17D /* CrewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewModel.swift; sourceTree = "<group>"; };
 		B566616A2AC70F2B000BE17D /* CapsuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleModel.swift; sourceTree = "<group>"; };
 		B566616C2AC71257000BE17D /* LaunchPadsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPadsModel.swift; sourceTree = "<group>"; };
+		B566616F2AC74CD0000BE17D /* StatefulVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulVM.swift; sourceTree = "<group>"; };
+		B56661712AC74CEB000BE17D /* StatefulDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulDS.swift; sourceTree = "<group>"; };
+		B56661732AC74D26000BE17D /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		B56661752AC74D51000BE17D /* HomeDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDS.swift; sourceTree = "<group>"; };
+		B56661772AC75FDC000BE17D /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
 		BA8883152682110CA65389E8 /* Pods_SpaceXLatestLaunchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4201671DD9D51672B1F8667 /* Pods_SpaceXLatestLaunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF721C9262663BC336F2A81C /* Pods-SpaceXLatestLaunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLatestLaunchTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLatestLaunchTests/Pods-SpaceXLatestLaunchTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,12 +186,7 @@
 				B56661562AC6EBB9000BE17D /* Controllers */,
 				B541556E2AC6DA470000EA4D /* Networking */,
 				B541556B2AC6D9E00000EA4D /* Helpers */,
-				B54155382AC6D4150000EA4D /* AppDelegate.swift */,
-				B541553A2AC6D4150000EA4D /* SceneDelegate.swift */,
-				B541553C2AC6D4150000EA4D /* ViewController.swift */,
-				B541553E2AC6D4150000EA4D /* Main.storyboard */,
-				B54155412AC6D4160000EA4D /* Assets.xcassets */,
-				B54155432AC6D4160000EA4D /* LaunchScreen.storyboard */,
+				B566616E2AC74C19000BE17D /* Core */,
 				B54155462AC6D4160000EA4D /* Info.plist */,
 			);
 			path = SpaceXLatestLaunch;
@@ -208,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				B54155692AC6D96D0000EA4D /* HomeVC.swift */,
+				B56661732AC74D26000BE17D /* HomeVM.swift */,
+				B56661752AC74D51000BE17D /* HomeDS.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -219,6 +226,8 @@
 				B566615A2AC6F0C3000BE17D /* Extensions */,
 				B566614F2AC6E63A000BE17D /* Managers */,
 				B541556C2AC6DA120000EA4D /* Constants.swift */,
+				B566616F2AC74CD0000BE17D /* StatefulVM.swift */,
+				B56661712AC74CEB000BE17D /* StatefulDS.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 				B566615F2AC6F214000BE17D /* Router */,
 				B566615E2AC6F210000BE17D /* Model */,
 				B541556F2AC6DA540000EA4D /* Networking.swift */,
+				B56661772AC75FDC000BE17D /* NetworkingProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -296,6 +306,19 @@
 				B56661642AC6F75C000BE17D /* Routers.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		B566616E2AC74C19000BE17D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B54155382AC6D4150000EA4D /* AppDelegate.swift */,
+				B541553A2AC6D4150000EA4D /* SceneDelegate.swift */,
+				B541553C2AC6D4150000EA4D /* ViewController.swift */,
+				B541553E2AC6D4150000EA4D /* Main.storyboard */,
+				B54155412AC6D4160000EA4D /* Assets.xcassets */,
+				B54155432AC6D4160000EA4D /* LaunchScreen.storyboard */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,20 +563,25 @@
 				B566616D2AC71257000BE17D /* LaunchPadsModel.swift in Sources */,
 				B541553D2AC6D4150000EA4D /* ViewController.swift in Sources */,
 				B56661612AC6F300000BE17D /* LatestLaunchesModel.swift in Sources */,
+				B56661782AC75FDC000BE17D /* NetworkingProtocol.swift in Sources */,
 				B54155722AC6DA800000EA4D /* EndpointConfiguration.swift in Sources */,
 				B56661592AC6EBDB000BE17D /* LoadingVC.swift in Sources */,
 				B541556A2AC6D96D0000EA4D /* HomeVC.swift in Sources */,
 				B541556D2AC6DA120000EA4D /* Constants.swift in Sources */,
+				B56661762AC74D51000BE17D /* HomeDS.swift in Sources */,
 				B56661652AC6F75C000BE17D /* Routers.swift in Sources */,
 				B54155702AC6DA540000EA4D /* Networking.swift in Sources */,
 				B56661692AC70E66000BE17D /* CrewModel.swift in Sources */,
+				B56661722AC74CEB000BE17D /* StatefulDS.swift in Sources */,
 				B56661532AC6EB21000BE17D /* LottieManager.swift in Sources */,
 				B56661672AC70A9F000BE17D /* RocketModel.swift in Sources */,
 				B56661512AC6E640000BE17D /* ConnectionManager.swift in Sources */,
 				B54155742AC6DABB0000EA4D /* CustomHTTPHeader.swift in Sources */,
 				B56661552AC6EB7B000BE17D /* LoadingManager.swift in Sources */,
 				B566615C2AC6F0CD000BE17D /* UIApplication+Ext.swift in Sources */,
+				B56661742AC74D26000BE17D /* HomeVM.swift in Sources */,
 				B566614E2AC6E12C000BE17D /* NetworkError.swift in Sources */,
+				B56661702AC74CD0000BE17D /* StatefulVM.swift in Sources */,
 				B566616B2AC70F2B000BE17D /* CapsuleModel.swift in Sources */,
 				B54155392AC6D4150000EA4D /* AppDelegate.swift in Sources */,
 				B541553B2AC6D4150000EA4D /* SceneDelegate.swift in Sources */,
