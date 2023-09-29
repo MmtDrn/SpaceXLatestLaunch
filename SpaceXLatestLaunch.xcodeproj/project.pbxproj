@@ -41,6 +41,10 @@
 		B56661742AC74D26000BE17D /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661732AC74D26000BE17D /* HomeVM.swift */; };
 		B56661762AC74D51000BE17D /* HomeDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661752AC74D51000BE17D /* HomeDS.swift */; };
 		B56661782AC75FDC000BE17D /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661772AC75FDC000BE17D /* NetworkingProtocol.swift */; };
+		B566617B2AC76780000BE17D /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566617A2AC76780000BE17D /* MainCell.swift */; };
+		B566617D2AC7687B000BE17D /* LaunchCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566617C2AC7687B000BE17D /* LaunchCases.swift */; };
+		B566617F2AC76A02000BE17D /* PaddingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566617E2AC76A02000BE17D /* PaddingType.swift */; };
+		B56661812AC76A29000BE17D /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661802AC76A29000BE17D /* CGFloat+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +106,10 @@
 		B56661732AC74D26000BE17D /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		B56661752AC74D51000BE17D /* HomeDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDS.swift; sourceTree = "<group>"; };
 		B56661772AC75FDC000BE17D /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
+		B566617A2AC76780000BE17D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		B566617C2AC7687B000BE17D /* LaunchCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCases.swift; sourceTree = "<group>"; };
+		B566617E2AC76A02000BE17D /* PaddingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingType.swift; sourceTree = "<group>"; };
+		B56661802AC76A29000BE17D /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		BA8883152682110CA65389E8 /* Pods_SpaceXLatestLaunchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4201671DD9D51672B1F8667 /* Pods_SpaceXLatestLaunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF721C9262663BC336F2A81C /* Pods-SpaceXLatestLaunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLatestLaunchTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLatestLaunchTests/Pods-SpaceXLatestLaunchTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +264,7 @@
 		B56661562AC6EBB9000BE17D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B56661792AC7676C000BE17D /* Cells */,
 				B56661572AC6EBC7000BE17D /* LoadingVC */,
 				B54155682AC6D9620000EA4D /* Home */,
 			);
@@ -274,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				B566615B2AC6F0CD000BE17D /* UIApplication+Ext.swift */,
+				B56661802AC76A29000BE17D /* CGFloat+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -284,6 +294,8 @@
 				B566614D2AC6E12C000BE17D /* NetworkError.swift */,
 				B54155712AC6DA800000EA4D /* EndpointConfiguration.swift */,
 				B54155732AC6DABB0000EA4D /* CustomHTTPHeader.swift */,
+				B566617C2AC7687B000BE17D /* LaunchCases.swift */,
+				B566617E2AC76A02000BE17D /* PaddingType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -319,6 +331,14 @@
 				B54155432AC6D4160000EA4D /* LaunchScreen.storyboard */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		B56661792AC7676C000BE17D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B566617A2AC76780000BE17D /* MainCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,6 +582,8 @@
 			files = (
 				B566616D2AC71257000BE17D /* LaunchPadsModel.swift in Sources */,
 				B541553D2AC6D4150000EA4D /* ViewController.swift in Sources */,
+				B566617D2AC7687B000BE17D /* LaunchCases.swift in Sources */,
+				B56661812AC76A29000BE17D /* CGFloat+Ext.swift in Sources */,
 				B56661612AC6F300000BE17D /* LatestLaunchesModel.swift in Sources */,
 				B56661782AC75FDC000BE17D /* NetworkingProtocol.swift in Sources */,
 				B54155722AC6DA800000EA4D /* EndpointConfiguration.swift in Sources */,
@@ -578,7 +600,9 @@
 				B56661512AC6E640000BE17D /* ConnectionManager.swift in Sources */,
 				B54155742AC6DABB0000EA4D /* CustomHTTPHeader.swift in Sources */,
 				B56661552AC6EB7B000BE17D /* LoadingManager.swift in Sources */,
+				B566617B2AC76780000BE17D /* MainCell.swift in Sources */,
 				B566615C2AC6F0CD000BE17D /* UIApplication+Ext.swift in Sources */,
+				B566617F2AC76A02000BE17D /* PaddingType.swift in Sources */,
 				B56661742AC74D26000BE17D /* HomeVM.swift in Sources */,
 				B566614E2AC6E12C000BE17D /* NetworkError.swift in Sources */,
 				B56661702AC74CD0000BE17D /* StatefulVM.swift in Sources */,
