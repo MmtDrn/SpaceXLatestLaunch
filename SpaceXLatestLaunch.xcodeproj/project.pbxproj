@@ -20,7 +20,7 @@
 		B541555A2AC6D4160000EA4D /* SpaceXLatestLaunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54155592AC6D4160000EA4D /* SpaceXLatestLaunchUITests.swift */; };
 		B541555C2AC6D4160000EA4D /* SpaceXLatestLaunchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B541555B2AC6D4160000EA4D /* SpaceXLatestLaunchUITestsLaunchTests.swift */; };
 		B541556A2AC6D96D0000EA4D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54155692AC6D96D0000EA4D /* HomeVC.swift */; };
-		B541556D2AC6DA120000EA4D /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = B541556C2AC6DA120000EA4D /* Constans.swift */; };
+		B541556D2AC6DA120000EA4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B541556C2AC6DA120000EA4D /* Constants.swift */; };
 		B54155702AC6DA540000EA4D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B541556F2AC6DA540000EA4D /* Networking.swift */; };
 		B54155722AC6DA800000EA4D /* EndpointConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54155712AC6DA800000EA4D /* EndpointConfiguration.swift */; };
 		B54155742AC6DABB0000EA4D /* CustomHTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54155732AC6DABB0000EA4D /* CustomHTTPHeader.swift */; };
@@ -30,8 +30,12 @@
 		B56661552AC6EB7B000BE17D /* LoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661542AC6EB7B000BE17D /* LoadingManager.swift */; };
 		B56661592AC6EBDB000BE17D /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661582AC6EBDB000BE17D /* LoadingVC.swift */; };
 		B566615C2AC6F0CD000BE17D /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566615B2AC6F0CD000BE17D /* UIApplication+Ext.swift */; };
-		B56661612AC6F300000BE17D /* LatestLaunches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661602AC6F300000BE17D /* LatestLaunches.swift */; };
+		B56661612AC6F300000BE17D /* LatestLaunchesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661602AC6F300000BE17D /* LatestLaunchesModel.swift */; };
 		B56661652AC6F75C000BE17D /* Routers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661642AC6F75C000BE17D /* Routers.swift */; };
+		B56661672AC70A9F000BE17D /* RocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661662AC70A9F000BE17D /* RocketModel.swift */; };
+		B56661692AC70E66000BE17D /* CrewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661682AC70E66000BE17D /* CrewModel.swift */; };
+		B566616B2AC70F2B000BE17D /* CapsuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566616A2AC70F2B000BE17D /* CapsuleModel.swift */; };
+		B566616D2AC71257000BE17D /* LaunchPadsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566616C2AC71257000BE17D /* LaunchPadsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +76,7 @@
 		B54155592AC6D4160000EA4D /* SpaceXLatestLaunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXLatestLaunchUITests.swift; sourceTree = "<group>"; };
 		B541555B2AC6D4160000EA4D /* SpaceXLatestLaunchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXLatestLaunchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B54155692AC6D96D0000EA4D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		B541556C2AC6DA120000EA4D /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		B541556C2AC6DA120000EA4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B541556F2AC6DA540000EA4D /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		B54155712AC6DA800000EA4D /* EndpointConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointConfiguration.swift; sourceTree = "<group>"; };
 		B54155732AC6DABB0000EA4D /* CustomHTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHTTPHeader.swift; sourceTree = "<group>"; };
@@ -82,8 +86,12 @@
 		B56661542AC6EB7B000BE17D /* LoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingManager.swift; sourceTree = "<group>"; };
 		B56661582AC6EBDB000BE17D /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		B566615B2AC6F0CD000BE17D /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
-		B56661602AC6F300000BE17D /* LatestLaunches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestLaunches.swift; sourceTree = "<group>"; };
+		B56661602AC6F300000BE17D /* LatestLaunchesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestLaunchesModel.swift; sourceTree = "<group>"; };
 		B56661642AC6F75C000BE17D /* Routers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routers.swift; sourceTree = "<group>"; };
+		B56661662AC70A9F000BE17D /* RocketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketModel.swift; sourceTree = "<group>"; };
+		B56661682AC70E66000BE17D /* CrewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewModel.swift; sourceTree = "<group>"; };
+		B566616A2AC70F2B000BE17D /* CapsuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleModel.swift; sourceTree = "<group>"; };
+		B566616C2AC71257000BE17D /* LaunchPadsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPadsModel.swift; sourceTree = "<group>"; };
 		BA8883152682110CA65389E8 /* Pods_SpaceXLatestLaunchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4201671DD9D51672B1F8667 /* Pods_SpaceXLatestLaunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF721C9262663BC336F2A81C /* Pods-SpaceXLatestLaunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLatestLaunchTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLatestLaunchTests/Pods-SpaceXLatestLaunchTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -210,8 +218,7 @@
 				B566615D2AC6F1A2000BE17D /* Enums */,
 				B566615A2AC6F0C3000BE17D /* Extensions */,
 				B566614F2AC6E63A000BE17D /* Managers */,
-				B541556C2AC6DA120000EA4D /* Constans.swift */,
-				B566614D2AC6E12C000BE17D /* NetworkError.swift */,
+				B541556C2AC6DA120000EA4D /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -264,6 +271,7 @@
 		B566615D2AC6F1A2000BE17D /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				B566614D2AC6E12C000BE17D /* NetworkError.swift */,
 				B54155712AC6DA800000EA4D /* EndpointConfiguration.swift */,
 				B54155732AC6DABB0000EA4D /* CustomHTTPHeader.swift */,
 			);
@@ -273,7 +281,11 @@
 		B566615E2AC6F210000BE17D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B56661602AC6F300000BE17D /* LatestLaunches.swift */,
+				B56661602AC6F300000BE17D /* LatestLaunchesModel.swift */,
+				B56661662AC70A9F000BE17D /* RocketModel.swift */,
+				B56661682AC70E66000BE17D /* CrewModel.swift */,
+				B566616A2AC70F2B000BE17D /* CapsuleModel.swift */,
+				B566616C2AC71257000BE17D /* LaunchPadsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -525,20 +537,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B566616D2AC71257000BE17D /* LaunchPadsModel.swift in Sources */,
 				B541553D2AC6D4150000EA4D /* ViewController.swift in Sources */,
-				B56661612AC6F300000BE17D /* LatestLaunches.swift in Sources */,
+				B56661612AC6F300000BE17D /* LatestLaunchesModel.swift in Sources */,
 				B54155722AC6DA800000EA4D /* EndpointConfiguration.swift in Sources */,
 				B56661592AC6EBDB000BE17D /* LoadingVC.swift in Sources */,
 				B541556A2AC6D96D0000EA4D /* HomeVC.swift in Sources */,
-				B541556D2AC6DA120000EA4D /* Constans.swift in Sources */,
+				B541556D2AC6DA120000EA4D /* Constants.swift in Sources */,
 				B56661652AC6F75C000BE17D /* Routers.swift in Sources */,
 				B54155702AC6DA540000EA4D /* Networking.swift in Sources */,
+				B56661692AC70E66000BE17D /* CrewModel.swift in Sources */,
 				B56661532AC6EB21000BE17D /* LottieManager.swift in Sources */,
+				B56661672AC70A9F000BE17D /* RocketModel.swift in Sources */,
 				B56661512AC6E640000BE17D /* ConnectionManager.swift in Sources */,
 				B54155742AC6DABB0000EA4D /* CustomHTTPHeader.swift in Sources */,
 				B56661552AC6EB7B000BE17D /* LoadingManager.swift in Sources */,
 				B566615C2AC6F0CD000BE17D /* UIApplication+Ext.swift in Sources */,
 				B566614E2AC6E12C000BE17D /* NetworkError.swift in Sources */,
+				B566616B2AC70F2B000BE17D /* CapsuleModel.swift in Sources */,
 				B54155392AC6D4150000EA4D /* AppDelegate.swift in Sources */,
 				B541553B2AC6D4150000EA4D /* SceneDelegate.swift in Sources */,
 			);

@@ -20,7 +20,7 @@ protocol EndpointConfiguration: URLRequestConvertible {
 
 extension EndpointConfiguration {
     func asURLRequest() throws -> URLRequest {
-        let url = try (Constans.baseURL + path).asURL()
+        let url = try (Constants.baseURL + path).asURL()
         
         var urlComponents = URLComponents(string: url.absoluteString)
         
