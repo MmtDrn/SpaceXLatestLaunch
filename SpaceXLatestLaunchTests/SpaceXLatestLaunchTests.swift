@@ -13,11 +13,16 @@ final class SpaceXLatestLaunchTests: XCTestCase {
     var viewModel: HomeVM!
     var networking: MockNetworking!
     var mockHomeVC: MockHomeVC!
+    var mockTableView: UITableView!
 
     override func setUpWithError() throws {
         networking = .init()
         viewModel = .init(networking: networking)
         mockHomeVC = .init(viewModel: viewModel)
+        
+        mockTableView = .init()
+        mockTableView.register(MainCell.self, forCellReuseIdentifier: MainCell.description())
+        mockTableView.register(CommonCell.self, forCellReuseIdentifier: CommonCell.description())
     }
 
     override func tearDownWithError() throws {
@@ -101,5 +106,38 @@ final class SpaceXLatestLaunchTests: XCTestCase {
         viewModel.fetchLaunchpad()
         
         XCTAssertFalse(mockHomeVC.launchpadFetchSuccess)
+    }
+    
+    func testDS_numberOfSections() {
+        let numberOfSections = viewModel.dataSource.numberOfSections(in: mockTableView)
+        
+        XCTAssertEqual(numberOfSections, LaunchCases.allCases.count)
+    }
+    
+    func testDS_numberOfRowsInSection() {
+        let numberOfRowsInSection = viewModel.dataSource.tableView(mockTableView, numberOfRowsInSection: 0)
+        
+        XCTAssertEqual(numberOfRowsInSection, 1)
+    }
+    
+    func testDS_cellForRowAt_MainCell() {
+        let mockIndexPath = IndexPath(row: 0, section: 0)
+        let cell = viewModel.dataSource.tableView(mockTableView, cellForRowAt: mockIndexPath)
+        
+        XCTAssertTrue(cell is MainCell)
+    }
+    
+    func testDS_cellForRowAt_CommonCell() {
+        let mockIndexPath = IndexPath(row: 0, section: 2)
+        let cell = viewModel.dataSource.tableView(mockTableView, cellForRowAt: mockIndexPath)
+        
+        XCTAssertTrue(cell is CommonCell)
+    }
+    
+    func testDS_heightForRowAt() {
+        let mockIndexPath = IndexPath(row: 0, section: 0)
+        let heightForRowAt = viewModel.dataSource.tableView(mockTableView, heightForRowAt: mockIndexPath)
+        
+        XCTAssertEqual(heightForRowAt, .setPadding(.height(250)))
     }
 }
