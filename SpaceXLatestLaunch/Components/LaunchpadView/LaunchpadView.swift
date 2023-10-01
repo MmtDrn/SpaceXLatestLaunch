@@ -111,8 +111,12 @@ class LaunchpadView: UIView {
             imageView.kf.setImage(with: url)
         }
         
-        nameLabel.text = model.fullName ?? ""
-        regionLabel.text = "📍" + (model.region ?? "")
-        descriptonLabel.text = model.details ?? ""
+        guard let name = model.fullName,
+              let region = model.region,
+              let descp = model.details else { return }
+        
+        nameLabel.text = name
+        regionLabel.text = "📍" + region
+        descriptonLabel.text = descp
     }
 }

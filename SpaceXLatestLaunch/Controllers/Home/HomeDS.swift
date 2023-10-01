@@ -68,7 +68,12 @@ extension HomeDS: UITableViewDelegate, UITableViewDataSource {
         switch currentCase {
         case .main:
             return .setPadding(.height(250))
-        default: return UITableView.automaticDimension
+        case .crew:
+            return crewArray.isEmpty ? .setPadding(.height(50)) : UITableView.automaticDimension
+        case .rocket:
+            return (rocketModel.name?.isEmpty ?? true) ? .setPadding(.height(50)) : UITableView.automaticDimension
+        case .launchPad:
+            return (launchpadModel.fullName?.isEmpty ?? true) ? .setPadding(.height(50)) : UITableView.automaticDimension
         }
     }
     

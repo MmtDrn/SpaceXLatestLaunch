@@ -167,17 +167,22 @@ class RocketView: UIView {
         }
         collectionView.reloadData()
         
-        nameLabel.text = "Name: " + (rocketModel.name ?? "")
-        typeLabel.text = "Type: " + (rocketModel.type?.capitalized ?? "")
-        statusLabel.attributedText = (rocketModel.active ?? true) ? "Status: Active".multiFont(6, diffColor: .systemGreen) : "Status: Inactive".multiFont(8, diffColor: .systemRed)
+        guard let name = rocketModel.name,
+              let type = rocketModel.type,
+              let status = rocketModel.active else { return }
         
-        guard let height = rocketModel.height,
-              let diameter = rocketModel.diameter,
-              let mass = rocketModel.mass else { return }
+        nameLabel.text = "Name: " + name
+        typeLabel.text = "Type: " + type.capitalized
+        statusLabel.attributedText = status ? "Status: Active".multiFont(6, diffColor: .systemGreen) : "Status: Inactive".multiFont(8, diffColor: .systemRed)
         
-        heightLabel.text = "Height: " + "\(height.meters ?? 0.0)" + "m"
-        diameterLabel.text = "Diameter: \(diameter.meters ?? 0.0)m"
-        massLabel.text = "Mass: \(mass.kg ?? 0)kg"
+        guard let height = rocketModel.height, let heightMeters = height.meters,
+              let diameter = rocketModel.diameter, let diaMeters = diameter.meters,
+              let mass = rocketModel.mass, let massKG = mass.kg else { return }
+        
+        
+        heightLabel.text = "Height: " + "\(heightMeters)" + "m"
+        diameterLabel.text = "Diameter: \(diaMeters)m"
+        massLabel.text = "Mass: \(massKG)kg"
         
         
     }

@@ -40,7 +40,11 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.backgroundColor = .systemGray5
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .systemGray5
+        appearance.shadowColor = .systemGray5
+        self.navigationController?.navigationBar.standardAppearance = appearance
+        
         view.backgroundColor = .systemGray5
         view.addSubview(tableView)
         observeViewModel()
@@ -79,6 +83,9 @@ extension HomeVC {
             case .launchpadFetchSuccess:
                 self.tableView.reloadSections(IndexSet(integer: 3), with: .none)
             case .showAlert(let errorMessage):
+                let aletVC = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+                aletVC.addAction(UIAlertAction(title: "Ok", style: .destructive))
+                self.present(aletVC, animated: true)
                 print(errorMessage)
             }
         }

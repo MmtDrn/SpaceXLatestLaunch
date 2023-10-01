@@ -57,6 +57,15 @@
 		B5E73C6E2AC96BE20099AACD /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C6D2AC96BE20099AACD /* UIView+Ext.swift */; };
 		B5E73C712AC9C4370099AACD /* MockHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C702AC9C4370099AACD /* MockHomeVC.swift */; };
 		B5E73C732AC9C4820099AACD /* MockNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C722AC9C4820099AACD /* MockNetworking.swift */; };
+		B5E73C7A2AC9ECBE0099AACD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E73C792AC9ECBD0099AACD /* WidgetKit.framework */; };
+		B5E73C7C2AC9ECBE0099AACD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E73C7B2AC9ECBE0099AACD /* SwiftUI.framework */; };
+		B5E73C7F2AC9ECBE0099AACD /* LockscreenWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C7E2AC9ECBE0099AACD /* LockscreenWidgetsBundle.swift */; };
+		B5E73C812AC9ECBE0099AACD /* LockscreenWidgetsLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C802AC9ECBE0099AACD /* LockscreenWidgetsLiveActivity.swift */; };
+		B5E73C832AC9ECBE0099AACD /* LockscreenWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C822AC9ECBE0099AACD /* LockscreenWidgets.swift */; };
+		B5E73C862AC9ECC00099AACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E73C852AC9ECC00099AACD /* Assets.xcassets */; };
+		B5E73C882AC9ECC00099AACD /* LockscreenWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C842AC9ECBE0099AACD /* LockscreenWidgets.intentdefinition */; };
+		B5E73C892AC9ECC00099AACD /* LockscreenWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C842AC9ECBE0099AACD /* LockscreenWidgets.intentdefinition */; };
+		B5E73C8C2AC9ECC00099AACD /* LockscreenWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B5E73C782AC9ECBD0099AACD /* LockscreenWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +83,28 @@
 			remoteGlobalIDString = B54155342AC6D4150000EA4D;
 			remoteInfo = SpaceXLatestLaunch;
 		};
+		B5E73C8A2AC9ECC00099AACD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B541552D2AC6D4150000EA4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5E73C772AC9ECBD0099AACD;
+			remoteInfo = LockscreenWidgetsExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5E73C902AC9ECC10099AACD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B5E73C8C2AC9ECC00099AACD /* LockscreenWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D6AF15937BC2C4219BF0769 /* Pods-SpaceXLatestLaunchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLatestLaunchTests.release.xcconfig"; path = "Target Support Files/Pods-SpaceXLatestLaunchTests/Pods-SpaceXLatestLaunchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +164,15 @@
 		B5E73C6D2AC96BE20099AACD /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		B5E73C702AC9C4370099AACD /* MockHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeVC.swift; sourceTree = "<group>"; };
 		B5E73C722AC9C4820099AACD /* MockNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworking.swift; sourceTree = "<group>"; };
+		B5E73C782AC9ECBD0099AACD /* LockscreenWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LockscreenWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E73C792AC9ECBD0099AACD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B5E73C7B2AC9ECBE0099AACD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B5E73C7E2AC9ECBE0099AACD /* LockscreenWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockscreenWidgetsBundle.swift; sourceTree = "<group>"; };
+		B5E73C802AC9ECBE0099AACD /* LockscreenWidgetsLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockscreenWidgetsLiveActivity.swift; sourceTree = "<group>"; };
+		B5E73C822AC9ECBE0099AACD /* LockscreenWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockscreenWidgets.swift; sourceTree = "<group>"; };
+		B5E73C842AC9ECBE0099AACD /* LockscreenWidgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LockscreenWidgets.intentdefinition; sourceTree = "<group>"; };
+		B5E73C852AC9ECC00099AACD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5E73C872AC9ECC00099AACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA8883152682110CA65389E8 /* Pods_SpaceXLatestLaunchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4201671DD9D51672B1F8667 /* Pods_SpaceXLatestLaunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF721C9262663BC336F2A81C /* Pods-SpaceXLatestLaunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLatestLaunchTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLatestLaunchTests/Pods-SpaceXLatestLaunchTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +203,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5E73C752AC9ECBD0099AACD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E73C7C2AC9ECBE0099AACD /* SwiftUI.framework in Frameworks */,
+				B5E73C7A2AC9ECBE0099AACD /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -173,6 +221,8 @@
 				F4201671DD9D51672B1F8667 /* Pods_SpaceXLatestLaunch.framework */,
 				AA94733B37B2A083EC2CA086 /* Pods_SpaceXLatestLaunch_SpaceXLatestLaunchUITests.framework */,
 				BA8883152682110CA65389E8 /* Pods_SpaceXLatestLaunchTests.framework */,
+				B5E73C792AC9ECBD0099AACD /* WidgetKit.framework */,
+				B5E73C7B2AC9ECBE0099AACD /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -196,6 +246,7 @@
 				B54155372AC6D4150000EA4D /* SpaceXLatestLaunch */,
 				B541554E2AC6D4160000EA4D /* SpaceXLatestLaunchTests */,
 				B54155582AC6D4160000EA4D /* SpaceXLatestLaunchUITests */,
+				B5E73C7D2AC9ECBE0099AACD /* LockscreenWidgets */,
 				B54155362AC6D4150000EA4D /* Products */,
 				0D664EF8151B30FF3815C5D3 /* Pods */,
 				0C14B4ED3C593C06B185FDD9 /* Frameworks */,
@@ -208,6 +259,7 @@
 				B54155352AC6D4150000EA4D /* SpaceXLatestLaunch.app */,
 				B541554B2AC6D4160000EA4D /* SpaceXLatestLaunchTests.xctest */,
 				B54155552AC6D4160000EA4D /* SpaceXLatestLaunchUITests.xctest */,
+				B5E73C782AC9ECBD0099AACD /* LockscreenWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -409,6 +461,19 @@
 			path = LaunchpadView;
 			sourceTree = "<group>";
 		};
+		B5E73C7D2AC9ECBE0099AACD /* LockscreenWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				B5E73C7E2AC9ECBE0099AACD /* LockscreenWidgetsBundle.swift */,
+				B5E73C802AC9ECBE0099AACD /* LockscreenWidgetsLiveActivity.swift */,
+				B5E73C822AC9ECBE0099AACD /* LockscreenWidgets.swift */,
+				B5E73C842AC9ECBE0099AACD /* LockscreenWidgets.intentdefinition */,
+				B5E73C852AC9ECC00099AACD /* Assets.xcassets */,
+				B5E73C872AC9ECC00099AACD /* Info.plist */,
+			);
+			path = LockscreenWidgets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -421,10 +486,12 @@
 				B54155322AC6D4150000EA4D /* Frameworks */,
 				B54155332AC6D4150000EA4D /* Resources */,
 				2B2D149AA241B71D618FA491 /* [CP] Embed Pods Frameworks */,
+				B5E73C902AC9ECC10099AACD /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B5E73C8B2AC9ECC00099AACD /* PBXTargetDependency */,
 			);
 			name = SpaceXLatestLaunch;
 			productName = SpaceXLatestLaunch;
@@ -470,6 +537,23 @@
 			productReference = B54155552AC6D4160000EA4D /* SpaceXLatestLaunchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B5E73C772AC9ECBD0099AACD /* LockscreenWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E73C8D2AC9ECC10099AACD /* Build configuration list for PBXNativeTarget "LockscreenWidgetsExtension" */;
+			buildPhases = (
+				B5E73C742AC9ECBD0099AACD /* Sources */,
+				B5E73C752AC9ECBD0099AACD /* Frameworks */,
+				B5E73C762AC9ECBD0099AACD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LockscreenWidgetsExtension;
+			productName = LockscreenWidgetsExtension;
+			productReference = B5E73C782AC9ECBD0099AACD /* LockscreenWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -491,6 +575,9 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = B54155342AC6D4150000EA4D;
 					};
+					B5E73C772AC9ECBD0099AACD = {
+						CreatedOnToolsVersion = 14.2;
+					};
 				};
 			};
 			buildConfigurationList = B54155302AC6D4150000EA4D /* Build configuration list for PBXProject "SpaceXLatestLaunch" */;
@@ -509,6 +596,7 @@
 				B54155342AC6D4150000EA4D /* SpaceXLatestLaunch */,
 				B541554A2AC6D4160000EA4D /* SpaceXLatestLaunchTests */,
 				B54155542AC6D4160000EA4D /* SpaceXLatestLaunchUITests */,
+				B5E73C772AC9ECBD0099AACD /* LockscreenWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -535,6 +623,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E73C762AC9ECBD0099AACD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E73C862AC9ECC00099AACD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +783,7 @@
 				B566616B2AC70F2B000BE17D /* CapsuleModel.swift in Sources */,
 				B54155392AC6D4150000EA4D /* AppDelegate.swift in Sources */,
 				B541553B2AC6D4150000EA4D /* SceneDelegate.swift in Sources */,
+				B5E73C892AC9ECC00099AACD /* LockscreenWidgets.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +806,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5E73C742AC9ECBD0099AACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E73C7F2AC9ECBE0099AACD /* LockscreenWidgetsBundle.swift in Sources */,
+				B5E73C812AC9ECBE0099AACD /* LockscreenWidgetsLiveActivity.swift in Sources */,
+				B5E73C832AC9ECBE0099AACD /* LockscreenWidgets.swift in Sources */,
+				B5E73C882AC9ECC00099AACD /* LockscreenWidgets.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -721,6 +829,11 @@
 			isa = PBXTargetDependency;
 			target = B54155342AC6D4150000EA4D /* SpaceXLatestLaunch */;
 			targetProxy = B54155562AC6D4160000EA4D /* PBXContainerItemProxy */;
+		};
+		B5E73C8B2AC9ECC00099AACD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5E73C772AC9ECBD0099AACD /* LockscreenWidgetsExtension */;
+			targetProxy = B5E73C8A2AC9ECC00099AACD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -862,6 +975,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43386E6D92F673D352F9E304 /* Pods-SpaceXLatestLaunch.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -890,6 +1004,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B277168EDF6D0872A36FC00 /* Pods-SpaceXLatestLaunch.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -990,6 +1105,58 @@
 			};
 			name = Release;
 		};
+		B5E73C8E2AC9ECC10099AACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockscreenWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockscreenWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MmtDrn.SpaceXLatestLaunch.LockscreenWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5E73C8F2AC9ECC10099AACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockscreenWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockscreenWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MmtDrn.SpaceXLatestLaunch.LockscreenWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1025,6 +1192,15 @@
 			buildConfigurations = (
 				B54155662AC6D4160000EA4D /* Debug */,
 				B54155672AC6D4160000EA4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5E73C8D2AC9ECC10099AACD /* Build configuration list for PBXNativeTarget "LockscreenWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E73C8E2AC9ECC10099AACD /* Debug */,
+				B5E73C8F2AC9ECC10099AACD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -48,6 +48,7 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
     func fetchCrew() {
         guard let crews = self.launchesModel.crew else { return }
         let dispatchGroup = DispatchGroup()
+        self.crewArray.removeAll()
 
         for crew in crews {
             dispatchGroup.enter()
