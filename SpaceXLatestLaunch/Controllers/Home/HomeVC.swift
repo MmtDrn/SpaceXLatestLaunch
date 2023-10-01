@@ -20,6 +20,9 @@ class HomeVC: UIViewController {
         tableView.dataSource = viewModel.dataSource
         tableView.delegate = viewModel.dataSource
         
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(refreshingData), for: .valueChanged)
+        
         tableView.register(MainCell.self, forCellReuseIdentifier: MainCell.description())
         tableView.register(CommonCell.self, forCellReuseIdentifier: CommonCell.description())
         
@@ -52,6 +55,10 @@ class HomeVC: UIViewController {
             make.edges.equalToSuperview()
         }
     }
+    
+    @objc func refreshingData() {
+        viewModel.fetchLatestLaunches()
+    }
 }
 
 // MARK: - Subscribe Logics
@@ -63,6 +70,7 @@ extension HomeVC {
             switch state {
                 
             case .fetchSuccess:
+                self.tableView.refreshControl?.endRefreshing()
                 self.tableView.reloadSections(IndexSet(integer: 0), with: .none)
             case .crewFetchSuccess:
                 self.tableView.reloadSections(IndexSet(integer: 1), with: .none)

@@ -28,7 +28,7 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
     }
     
     func fetchLatestLaunches() {
-        networking.request(router: Routers.latestLaunches) { [weak self]
+        networking.request(router: Routers.latestLaunches, shouldShowLoading: true) { [weak self]
             (response: LatestLaunchesModel?, error) in
             guard let self else { return }
             
