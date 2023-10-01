@@ -19,7 +19,7 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
     let dataSource = HomeDS()
     var networking: NetworkingProtocol
     
-    private var launchesModel = LatestLaunchesModel()
+    var launchesModel = LatestLaunchesModel()
     private var crewArray = [CrewModel]()
     private var capsuleArray = [CapsuleModel]()
     
@@ -39,13 +39,13 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
                 self.dataSource.launchesModel = response
                 self.fetchCrew()
                 self.fetchRocket()
-                self.fetcLaunchpad()
+                self.fetchLaunchpad()
                 self.emit(.fetchSuccess)
             }
         }
     }
     
-    private func fetchCrew() {
+    func fetchCrew() {
         guard let crews = self.launchesModel.crew else { return }
         let dispatchGroup = DispatchGroup()
 
@@ -59,6 +59,7 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
                     self.emit(.showAlert(error.errorMessage))
                 } else if let response {
                     self.crewArray.append(response)
+                    self.emit(.crewFetchSuccess)
                 }
                 dispatchGroup.leave()
             }
@@ -69,7 +70,7 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
         }
     }
     
-    private func fetchRocket() {
+    func fetchRocket() {
         guard let rocket = self.launchesModel.rocket else { return }
         
         networking.request(router: Routers.rocket(id: rocket)) { [weak self]
@@ -85,7 +86,7 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
         }
     }
     
-    private func fetcLaunchpad() {
+    func fetchLaunchpad() {
         guard let launchpad = self.launchesModel.launchPad else { return }
         
         networking.request(router: Routers.launchPads(id: launchpad)) {[weak self]
