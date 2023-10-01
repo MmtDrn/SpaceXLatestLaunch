@@ -53,6 +53,7 @@
 		B5BAB0092AC930D9007959EC /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB0082AC930D9007959EC /* RocketView.swift */; };
 		B5BAB00B2AC93104007959EC /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB00A2AC93104007959EC /* CapsuleView.swift */; };
 		B5BAB00D2AC93124007959EC /* LaunchpadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB00C2AC93124007959EC /* LaunchpadView.swift */; };
+		B5E73C692AC950160099AACD /* CrewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C682AC950160099AACD /* CrewViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		B5BAB0082AC930D9007959EC /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
 		B5BAB00A2AC93104007959EC /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
 		B5BAB00C2AC93124007959EC /* LaunchpadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadView.swift; sourceTree = "<group>"; };
+		B5E73C682AC950160099AACD /* CrewViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewViewCell.swift; sourceTree = "<group>"; };
 		BA8883152682110CA65389E8 /* Pods_SpaceXLatestLaunchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4201671DD9D51672B1F8667 /* Pods_SpaceXLatestLaunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF721C9262663BC336F2A81C /* Pods-SpaceXLatestLaunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLatestLaunchTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLatestLaunchTests/Pods-SpaceXLatestLaunchTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -364,13 +366,22 @@
 		B5BAB0032AC92219007959EC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B5BAB00E2AC94FCF007959EC /* CrewView */,
 				B5BAB0042AC9222E007959EC /* CommonTitleView.swift */,
-				B5BAB0062AC9307D007959EC /* CrewView.swift */,
 				B5BAB0082AC930D9007959EC /* RocketView.swift */,
 				B5BAB00A2AC93104007959EC /* CapsuleView.swift */,
 				B5BAB00C2AC93124007959EC /* LaunchpadView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B5BAB00E2AC94FCF007959EC /* CrewView */ = {
+			isa = PBXGroup;
+			children = (
+				B5BAB0062AC9307D007959EC /* CrewView.swift */,
+				B5E73C682AC950160099AACD /* CrewViewCell.swift */,
+			);
+			path = CrewView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -617,6 +628,7 @@
 				B5BAB00D2AC93124007959EC /* LaunchpadView.swift in Sources */,
 				B566617D2AC7687B000BE17D /* LaunchCases.swift in Sources */,
 				B56661812AC76A29000BE17D /* CGFloat+Ext.swift in Sources */,
+				B5E73C692AC950160099AACD /* CrewViewCell.swift in Sources */,
 				B56661612AC6F300000BE17D /* LatestLaunchesModel.swift in Sources */,
 				B56661782AC75FDC000BE17D /* NetworkingProtocol.swift in Sources */,
 				B54155722AC6DA800000EA4D /* EndpointConfiguration.swift in Sources */,
