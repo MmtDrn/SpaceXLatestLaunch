@@ -53,7 +53,7 @@ class CrewViewCell: UICollectionViewCell {
         label.text = "Active"
         label.textAlignment = .center
         label.textColor = .systemGreen
-        label.font = .systemFont(ofSize: .setPadding(.witdh(10)), weight: .regular)
+        label.font = .systemFont(ofSize: .setPadding(.witdh(10)), weight: .semibold)
         label.backgroundColor = .clear
         
         return label

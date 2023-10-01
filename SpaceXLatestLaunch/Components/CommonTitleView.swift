@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol CommonTitleViewprotocol: AnyObject {
+    func presentToggle()
+}
+
 class CommonTitleView: UIView {
+    
+    weak var delegate: CommonTitleViewprotocol?
     
     private lazy var titleImage: UIImageView = {
         let imageView = UIImageView()
@@ -36,14 +42,17 @@ class CommonTitleView: UIView {
         
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .clear
-        imageView.image = .init(named: "show")
+        imageView.image = .init(named: "hide")
+        imageView.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(presentToggle))
+        imageView.addGestureRecognizer(gesture)
         
         return imageView
     }()
     
-    var present: Bool = true {
+    private var present: Bool = true {
         didSet {
-            presentImage.image = present ? .init(named: "show") : .init(named: "hide")
+            presentImage.image = present ? .init(named: "hide") : .init(named: "show")
         }
     }
     
@@ -80,6 +89,11 @@ class CommonTitleView: UIView {
             make.trailing.equalToSuperview().inset(CGFloat.setPadding(.witdh(20)))
             make.height.width.equalTo(CGFloat.setPadding(.height(20)))
         }
+    }
+    
+    @objc private func presentToggle() {
+        present.toggle()
+        delegate?.presentToggle()
     }
     
     func configViews(launchCases: LaunchCases) {

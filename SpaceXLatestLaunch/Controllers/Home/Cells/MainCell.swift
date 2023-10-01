@@ -81,6 +81,7 @@ class MainCell: UITableViewCell {
     
     private func setupViews() {
         backgroundColor = .systemGray5
+        selectionStyle = .none
         contentView.addSubview(launchImage)
         contentView.addSubview(labelStackView)
     }
