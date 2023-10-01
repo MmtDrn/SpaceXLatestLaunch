@@ -47,6 +47,8 @@
 		B56661812AC76A29000BE17D /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661802AC76A29000BE17D /* CGFloat+Ext.swift */; };
 		B56661832AC8020F000BE17D /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661822AC8020F000BE17D /* Date+Ext.swift */; };
 		B56661852AC802FB000BE17D /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661842AC802FB000BE17D /* String+Ext.swift */; };
+		B5BAB0022AC91B71007959EC /* CommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB0012AC91B71007959EC /* CommonCell.swift */; };
+		B5BAB0052AC9222F007959EC /* CommonTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB0042AC9222E007959EC /* CommonTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		B56661802AC76A29000BE17D /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		B56661822AC8020F000BE17D /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		B56661842AC802FB000BE17D /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		B5BAB0012AC91B71007959EC /* CommonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCell.swift; sourceTree = "<group>"; };
+		B5BAB0042AC9222E007959EC /* CommonTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTitleView.swift; sourceTree = "<group>"; };
 		BA8883152682110CA65389E8 /* Pods_SpaceXLatestLaunchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4201671DD9D51672B1F8667 /* Pods_SpaceXLatestLaunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF721C9262663BC336F2A81C /* Pods-SpaceXLatestLaunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLatestLaunchTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLatestLaunchTests/Pods-SpaceXLatestLaunchTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 		B54155372AC6D4150000EA4D /* SpaceXLatestLaunch */ = {
 			isa = PBXGroup;
 			children = (
+				B5BAB0032AC92219007959EC /* Components */,
 				B56661562AC6EBB9000BE17D /* Controllers */,
 				B541556E2AC6DA470000EA4D /* Networking */,
 				B541556B2AC6D9E00000EA4D /* Helpers */,
@@ -343,8 +348,17 @@
 			isa = PBXGroup;
 			children = (
 				B566617A2AC76780000BE17D /* MainCell.swift */,
+				B5BAB0012AC91B71007959EC /* CommonCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B5BAB0032AC92219007959EC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B5BAB0042AC9222E007959EC /* CommonTitleView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -606,10 +620,12 @@
 				B56661532AC6EB21000BE17D /* LottieManager.swift in Sources */,
 				B56661672AC70A9F000BE17D /* RocketModel.swift in Sources */,
 				B56661512AC6E640000BE17D /* ConnectionManager.swift in Sources */,
+				B5BAB0022AC91B71007959EC /* CommonCell.swift in Sources */,
 				B54155742AC6DABB0000EA4D /* CustomHTTPHeader.swift in Sources */,
 				B56661552AC6EB7B000BE17D /* LoadingManager.swift in Sources */,
 				B566617B2AC76780000BE17D /* MainCell.swift in Sources */,
 				B566615C2AC6F0CD000BE17D /* UIApplication+Ext.swift in Sources */,
+				B5BAB0052AC9222F007959EC /* CommonTitleView.swift in Sources */,
 				B566617F2AC76A02000BE17D /* PaddingType.swift in Sources */,
 				B56661742AC74D26000BE17D /* HomeVM.swift in Sources */,
 				B566614E2AC6E12C000BE17D /* NetworkError.swift in Sources */,
