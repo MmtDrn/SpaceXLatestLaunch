@@ -54,6 +54,8 @@
 		B5BAB00B2AC93104007959EC /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB00A2AC93104007959EC /* CapsuleView.swift */; };
 		B5BAB00D2AC93124007959EC /* LaunchpadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB00C2AC93124007959EC /* LaunchpadView.swift */; };
 		B5E73C692AC950160099AACD /* CrewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C682AC950160099AACD /* CrewViewCell.swift */; };
+		B5E73C6C2AC965A90099AACD /* RocketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C6B2AC965A90099AACD /* RocketViewCell.swift */; };
+		B5E73C6E2AC96BE20099AACD /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C6D2AC96BE20099AACD /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +130,8 @@
 		B5BAB00A2AC93104007959EC /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
 		B5BAB00C2AC93124007959EC /* LaunchpadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadView.swift; sourceTree = "<group>"; };
 		B5E73C682AC950160099AACD /* CrewViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewViewCell.swift; sourceTree = "<group>"; };
+		B5E73C6B2AC965A90099AACD /* RocketViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewCell.swift; sourceTree = "<group>"; };
+		B5E73C6D2AC96BE20099AACD /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		BA8883152682110CA65389E8 /* Pods_SpaceXLatestLaunchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4201671DD9D51672B1F8667 /* Pods_SpaceXLatestLaunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLatestLaunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF721C9262663BC336F2A81C /* Pods-SpaceXLatestLaunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLatestLaunchTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLatestLaunchTests/Pods-SpaceXLatestLaunchTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -305,6 +309,7 @@
 				B56661802AC76A29000BE17D /* CGFloat+Ext.swift */,
 				B56661822AC8020F000BE17D /* Date+Ext.swift */,
 				B56661842AC802FB000BE17D /* String+Ext.swift */,
+				B5E73C6D2AC96BE20099AACD /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -366,9 +371,9 @@
 		B5BAB0032AC92219007959EC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B5E73C6A2AC9651C0099AACD /* RocketView */,
 				B5BAB00E2AC94FCF007959EC /* CrewView */,
 				B5BAB0042AC9222E007959EC /* CommonTitleView.swift */,
-				B5BAB0082AC930D9007959EC /* RocketView.swift */,
 				B5BAB00A2AC93104007959EC /* CapsuleView.swift */,
 				B5BAB00C2AC93124007959EC /* LaunchpadView.swift */,
 			);
@@ -382,6 +387,15 @@
 				B5E73C682AC950160099AACD /* CrewViewCell.swift */,
 			);
 			path = CrewView;
+			sourceTree = "<group>";
+		};
+		B5E73C6A2AC9651C0099AACD /* RocketView */ = {
+			isa = PBXGroup;
+			children = (
+				B5BAB0082AC930D9007959EC /* RocketView.swift */,
+				B5E73C6B2AC965A90099AACD /* RocketViewCell.swift */,
+			);
+			path = RocketView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -642,6 +656,7 @@
 				B5BAB0072AC9307D007959EC /* CrewView.swift in Sources */,
 				B56661652AC6F75C000BE17D /* Routers.swift in Sources */,
 				B54155702AC6DA540000EA4D /* Networking.swift in Sources */,
+				B5E73C6C2AC965A90099AACD /* RocketViewCell.swift in Sources */,
 				B56661692AC70E66000BE17D /* CrewModel.swift in Sources */,
 				B56661722AC74CEB000BE17D /* StatefulDS.swift in Sources */,
 				B56661532AC6EB21000BE17D /* LottieManager.swift in Sources */,
@@ -654,6 +669,7 @@
 				B566617B2AC76780000BE17D /* MainCell.swift in Sources */,
 				B566615C2AC6F0CD000BE17D /* UIApplication+Ext.swift in Sources */,
 				B5BAB0052AC9222F007959EC /* CommonTitleView.swift in Sources */,
+				B5E73C6E2AC96BE20099AACD /* UIView+Ext.swift in Sources */,
 				B566617F2AC76A02000BE17D /* PaddingType.swift in Sources */,
 				B56661742AC74D26000BE17D /* HomeVM.swift in Sources */,
 				B566614E2AC6E12C000BE17D /* NetworkError.swift in Sources */,
