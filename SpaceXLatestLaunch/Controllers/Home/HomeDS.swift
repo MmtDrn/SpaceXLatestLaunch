@@ -8,12 +8,16 @@
 import UIKit
 
 enum HomeDSStateChange: StateChange {
-    
+    case presentToggle
 }
 
 class HomeDS: StatefulDS<HomeDSStateChange> {
     let allCase = LaunchCases.allCases
     var launchesModel = LatestLaunchesModel()
+    var crewArray = [CrewModel]()
+    var rocketModel = RocketModel()
+    var capsuleArray = [CapsuleModel]()
+    var launchpadModel = LaunchPadsModel()
 }
 
 extension HomeDS: UITableViewDelegate, UITableViewDataSource {
@@ -35,29 +39,53 @@ extension HomeDS: UITableViewDelegate, UITableViewDataSource {
             cell.configViews(model: launchesModel)
             
             return cell
-        default:
-            let cell = UITableViewCell()
+        case .crew:
+            let cell = tableView.dequeueReusableCell(withIdentifier: CommonCell.description(), for: indexPath) as! CommonCell
             
-            cell.backgroundColor = .red
+            cell.delegate  = self
+            cell.configViews(launchesCases: currentCase, crewArray: crewArray)
+            
+            return cell
+        case .rocket:
+            let cell = tableView.dequeueReusableCell(withIdentifier: CommonCell.description(), for: indexPath) as! CommonCell
+            
+            cell.delegate  = self
+            cell.configViews(launchesCases: currentCase, rocketModel: self.rocketModel)
+            
+            return cell
+        case .launchPad:
+            let cell = tableView.dequeueReusableCell(withIdentifier: CommonCell.description(), for: indexPath) as! CommonCell
+            
+            cell.delegate  = self
+            cell.configViews(launchesCases: currentCase, launchpadModel: self.launchpadModel)
             
             return cell
         }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let currentCase = allCase[indexPath.section]
         switch currentCase {
         case .main:
-            return 250
-        default: return 100
+            return .setPadding(.height(250))
+        default: return UITableView.automaticDimension
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return allCase[section].title
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return .setPadding(.height(10))
+    }
+}
+
+extension HomeDS: CommonCellProtocol {
+    
+    func presentToggle() {
+        emit(.presentToggle)
     }
 }
