@@ -51,7 +51,6 @@
 		B5BAB0052AC9222F007959EC /* CommonTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB0042AC9222E007959EC /* CommonTitleView.swift */; };
 		B5BAB0072AC9307D007959EC /* CrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB0062AC9307D007959EC /* CrewView.swift */; };
 		B5BAB0092AC930D9007959EC /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB0082AC930D9007959EC /* RocketView.swift */; };
-		B5BAB00B2AC93104007959EC /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB00A2AC93104007959EC /* CapsuleView.swift */; };
 		B5BAB00D2AC93124007959EC /* LaunchpadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB00C2AC93124007959EC /* LaunchpadView.swift */; };
 		B5E73C692AC950160099AACD /* CrewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C682AC950160099AACD /* CrewViewCell.swift */; };
 		B5E73C6C2AC965A90099AACD /* RocketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E73C6B2AC965A90099AACD /* RocketViewCell.swift */; };
@@ -127,7 +126,6 @@
 		B5BAB0042AC9222E007959EC /* CommonTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTitleView.swift; sourceTree = "<group>"; };
 		B5BAB0062AC9307D007959EC /* CrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewView.swift; sourceTree = "<group>"; };
 		B5BAB0082AC930D9007959EC /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
-		B5BAB00A2AC93104007959EC /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
 		B5BAB00C2AC93124007959EC /* LaunchpadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadView.swift; sourceTree = "<group>"; };
 		B5E73C682AC950160099AACD /* CrewViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewViewCell.swift; sourceTree = "<group>"; };
 		B5E73C6B2AC965A90099AACD /* RocketViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewCell.swift; sourceTree = "<group>"; };
@@ -371,11 +369,10 @@
 		B5BAB0032AC92219007959EC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B5E73C6F2AC986190099AACD /* LaunchpadView */,
 				B5E73C6A2AC9651C0099AACD /* RocketView */,
 				B5BAB00E2AC94FCF007959EC /* CrewView */,
 				B5BAB0042AC9222E007959EC /* CommonTitleView.swift */,
-				B5BAB00A2AC93104007959EC /* CapsuleView.swift */,
-				B5BAB00C2AC93124007959EC /* LaunchpadView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -396,6 +393,14 @@
 				B5E73C6B2AC965A90099AACD /* RocketViewCell.swift */,
 			);
 			path = RocketView;
+			sourceTree = "<group>";
+		};
+		B5E73C6F2AC986190099AACD /* LaunchpadView */ = {
+			isa = PBXGroup;
+			children = (
+				B5BAB00C2AC93124007959EC /* LaunchpadView.swift */,
+			);
+			path = LaunchpadView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -651,7 +656,6 @@
 				B541556A2AC6D96D0000EA4D /* HomeVC.swift in Sources */,
 				B56661832AC8020F000BE17D /* Date+Ext.swift in Sources */,
 				B541556D2AC6DA120000EA4D /* Constants.swift in Sources */,
-				B5BAB00B2AC93104007959EC /* CapsuleView.swift in Sources */,
 				B56661762AC74D51000BE17D /* HomeDS.swift in Sources */,
 				B5BAB0072AC9307D007959EC /* CrewView.swift in Sources */,
 				B56661652AC6F75C000BE17D /* Routers.swift in Sources */,

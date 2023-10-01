@@ -11,7 +11,6 @@ enum HomeVMStateChange: StateChange {
     case fetchSuccess
     case crewFetchSuccess
     case rocketFetchSuccess
-    case capsuleFetchSuccess
     case launchpadFetchSuccess
     case showAlert(String)
 }
@@ -40,7 +39,6 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
                 self.dataSource.launchesModel = response
                 self.fetchCrew()
                 self.fetchRocket()
-                self.fetchCapsule()
                 self.fetcLaunchpad()
                 self.emit(.fetchSuccess)
             }
@@ -84,31 +82,6 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
                 self.dataSource.rocketModel = response
                 self.emit(.rocketFetchSuccess)
             }
-        }
-    }
-    
-    private func fetchCapsule() {
-        guard let capsules = self.launchesModel.capsules else { return }
-        let dispatchGroup = DispatchGroup()
-        
-        for capsule in capsules {
-            dispatchGroup.enter()
-            
-            networking.request(router: Routers.capsules(id: capsule)) { [weak self]
-                (response: CapsuleModel?, error) in
-                guard let self else { return }
-                
-                if let error {
-                    self.emit(.showAlert(error.errorMessage))
-                } else if let response {
-                    self.capsuleArray.append(response)
-                }
-                dispatchGroup.leave()
-            }
-        }
-        dispatchGroup.notify(queue: .main) {
-            self.dataSource.capsuleArray = self.capsuleArray
-            self.emit(.capsuleFetchSuccess)
         }
     }
     
