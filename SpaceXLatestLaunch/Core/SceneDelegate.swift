@@ -18,7 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         let networking = Networking.shared
-        let homeVM = HomeVM(networking: networking)
+        let latestLaunchManager = LatestLaunchManager.shared
+        let homeVM = HomeVM(networking: networking, latestLaunchManager: latestLaunchManager)
         let vc = UINavigationController(rootViewController: HomeVC(vievModel: homeVM))
         window?.rootViewController = vc
         window?.makeKeyAndVisible()

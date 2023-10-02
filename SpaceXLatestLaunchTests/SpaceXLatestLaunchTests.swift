@@ -13,11 +13,13 @@ final class SpaceXLatestLaunchTests: XCTestCase {
     var viewModel: HomeVM!
     var networking: MockNetworking!
     var mockHomeVC: MockHomeVC!
+    var mockLastLaunchManager: MockLatestLaunchManager!
     var mockTableView: UITableView!
 
     override func setUpWithError() throws {
         networking = .init()
-        viewModel = .init(networking: networking)
+        mockLastLaunchManager = .init()
+        viewModel = .init(networking: networking, latestLaunchManager: mockLastLaunchManager)
         mockHomeVC = .init(viewModel: viewModel)
         
         mockTableView = .init()
@@ -139,5 +141,18 @@ final class SpaceXLatestLaunchTests: XCTestCase {
         let heightForRowAt = viewModel.dataSource.tableView(mockTableView, heightForRowAt: mockIndexPath)
         
         XCTAssertEqual(heightForRowAt, .setPadding(.height(250)))
+    }
+}
+
+final class MockLatestLaunchManager: LatestLaunchManagerProtocol {
+    var mockLatestLaunch: LatestLaunchesModel?
+    
+    var latestLaunch: LatestLaunchesModel? {
+        get {
+            return mockLatestLaunch
+        }
+        set {
+            
+        }
     }
 }

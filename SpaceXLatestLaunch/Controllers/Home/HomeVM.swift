@@ -18,13 +18,15 @@ enum HomeVMStateChange: StateChange {
 class HomeVM: StatefulVM<HomeVMStateChange> {
     let dataSource = HomeDS()
     var networking: NetworkingProtocol
+    var latestLaunchManager: LatestLaunchManagerProtocol
     
     var launchesModel = LatestLaunchesModel()
     private var crewArray = [CrewModel]()
     private var capsuleArray = [CapsuleModel]()
     
-    init(networking: NetworkingProtocol) {
+    init(networking: NetworkingProtocol, latestLaunchManager: LatestLaunchManagerProtocol) {
         self.networking = networking
+        self.latestLaunchManager = latestLaunchManager
     }
     
     func fetchLatestLaunches() {
@@ -40,6 +42,7 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
                 self.fetchCrew()
                 self.fetchRocket()
                 self.fetchLaunchpad()
+                self.latestLaunchManager.latestLaunch = response
                 self.emit(.fetchSuccess)
             }
         }
