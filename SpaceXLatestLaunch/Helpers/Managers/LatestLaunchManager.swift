@@ -22,6 +22,8 @@ class LatestLaunchManager: LatestLaunchManagerProtocol {
         }
         set(latestLaunchModel) {
             UserDefaultsManager.set(latestLaunchModel, forKey: "latestLaunch")
+//            LiveActivityManager.shared.stopActivity()
+            LiveActivityManager.shared.startActivity(endDate: latestLaunchModel?.dateUtc)
         }
     }
 }
