@@ -39,10 +39,9 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
             } else if let response {
                 self.launchesModel = response
                 self.dataSource.launchesModel = response
-                self.fetchCrew()
-                self.fetchRocket()
-                self.fetchLaunchpad()
                 self.latestLaunchManager.latestLaunch = response
+                LiveActivityManager.shared.startActivity(endDate:response.dateUtc)
+                self.fetchCrew()
                 self.emit(.fetchSuccess)
             }
         }
@@ -69,6 +68,8 @@ class HomeVM: StatefulVM<HomeVMStateChange> {
             }
         }
         dispatchGroup.notify(queue: .main) {
+            self.fetchRocket()
+            self.fetchLaunchpad()
             self.dataSource.crewArray = self.crewArray
             self.emit(.crewFetchSuccess)
         }

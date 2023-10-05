@@ -50,6 +50,7 @@
 		B59E64D62ACC1E6900A7130D /* TimerAttiributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E64D52ACC1E6900A7130D /* TimerAttiributes.swift */; };
 		B59E64D82ACC1E8A00A7130D /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E64D72ACC1E8A00A7130D /* LiveActivityManager.swift */; };
 		B59E64DB2ACC322E00A7130D /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56661842AC802FB000BE17D /* String+Ext.swift */; };
+		B59E64DC2ACC383E00A7130D /* TimerAttiributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E64D52ACC1E6900A7130D /* TimerAttiributes.swift */; };
 		B5BAB0022AC91B71007959EC /* CommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB0012AC91B71007959EC /* CommonCell.swift */; };
 		B5BAB0052AC9222F007959EC /* CommonTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB0042AC9222E007959EC /* CommonTitleView.swift */; };
 		B5BAB0072AC9307D007959EC /* CrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAB0062AC9307D007959EC /* CrewView.swift */; };
@@ -825,6 +826,7 @@
 			files = (
 				B5E73C812AC9ECBE0099AACD /* LockscreenWidgetsLiveActivity.swift in Sources */,
 				B59E64DB2ACC322E00A7130D /* String+Ext.swift in Sources */,
+				B59E64DC2ACC383E00A7130D /* TimerAttiributes.swift in Sources */,
 				B5E73C882AC9ECC00099AACD /* LockscreenWidgets.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
